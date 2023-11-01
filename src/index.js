@@ -2,13 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const swaggerUI = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
-const cors = require('cors')
+const cors = require('cors');
+require('dotenv').config();
+
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb+srv://eventosapi:OBteiqAuu7ERZ26R@eventos.btbbnuk.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect(process.env.MONGODB_CONNECT_URL);
 
 const port = 3001;
 
