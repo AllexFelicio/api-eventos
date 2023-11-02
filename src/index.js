@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const swaggerUI = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 const cors = require('cors');
-const allowCors = require('./middlewares/corsMiddlewares');
 require('dotenv').config();
 
 
@@ -11,7 +10,6 @@ require('dotenv').config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use(allowCors);
 
 mongoose.connect(process.env.MONGODB_CONNECT_URL);
 
