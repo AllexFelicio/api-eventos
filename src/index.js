@@ -20,7 +20,9 @@ const eventRoutes = require('./routes/eventRoutes');
 const placeRoutes = require('./routes/placeRoutes');
 const ticketRoutes = require('./routes/ticketRoutes');
 
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+
+app.use('/api-docs', swaggerUI.serve);
+app.get('/api-docs', swaggerUI.setup(swaggerDocument))
 app.use('/events', eventRoutes);
 app.use('/places', placeRoutes);
 app.use('/tickets', ticketRoutes);
