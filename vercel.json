@@ -11,7 +11,7 @@
             "src": "(.*)",
             "dest": "src/index.js",
             "headers": {
-                "Acess-Control-Allow-Origin": "*"
+                "Access-Control-Allow-Origin": "*"
             }
         }
     ]
