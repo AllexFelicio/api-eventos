@@ -12,6 +12,7 @@
         "url": "https://api-eventos-allexfelicio.vercel.app",
         "description": "API de produção"
     }],
+    "apis": ["src/**/*.js"],
     "tags": [
         {
             "name": "Eventos"
