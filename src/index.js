@@ -21,9 +21,47 @@ const port = 3001;
 const eventRoutes = require('./routes/eventRoutes');
 const placeRoutes = require('./routes/placeRoutes');
 const ticketRoutes = require('./routes/ticketRoutes');
+const options = {
+    definition: {
+      openapi: "3.0.0",
+      info: {
+        title: "Library API",
+        version: "1.0.0",
+        description: "A simple Express Library API",
+        termsOfService: "http://example.com/terms/",
+        contact: {
+          name: "API Support",
+          url: "http://www.exmaple.com/support",
+          email: "support@example.com",
+        },
+      },
+      servers: [
+        {
+          url: "http://localhost:3001",
+          description: "API local",
+        },
+        {
+            url: "https://api-eventos-allexfelicio.vercel.app",
+            description: "API de produção",
+          },
+      ],
+    },
+    // This is to call all the file
+    apis: ["src/**/*.js"],
+  };
+  
+  const specs = swaggerJsDoc(options);
+  // app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
+  
+  app.use(
+    "/api-docs",
+    swaggerUI.serve,
+    swaggerUI.setup(specs, { customCssUrl: CSS_URL })
+  );
+  
 
 
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+//app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 app.use('/events', eventRoutes);
 app.use('/places', placeRoutes);
 app.use('/tickets', ticketRoutes);
