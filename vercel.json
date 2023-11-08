@@ -1,40 +1,17 @@
 {
-    "version": 2,
-    "public": true,
-    "builds": [
-      {
-        "src": "src/index.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "dist/**",
-        "use": "@vercel/static"
-      }
+    "version":2,
+    "builds":[
+        {
+            "src": "src/index.js",
+            "use": "@vercel/node"
+        }
     ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/src/index.js"
-      },
-      {
-        "src": "/api-docs",
-        "dest": "dist/**"
-      },
-      {
-        "src": "/",
-        "dest": "/dist/index.html"
-      }
-    ],
-    "headers": [
-      {
-        "source": "/(.*)",
-        "headers": [
-          {
-            "key": "Access-Control-Allow-Origin",
-            "value": "*"
-          }
-        ]
-      }
+    "routes":[
+        {
+            "src": "/(.*)",
+            "dest": "/"
+
+            
+        }
     ]
-  }
-  
+}
