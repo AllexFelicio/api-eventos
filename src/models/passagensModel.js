@@ -5,6 +5,10 @@ const flightBookingSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    destination: {
+        type: String,
+        required: false
+    },
     outboundFlight: {
         type: String,
         required: false
