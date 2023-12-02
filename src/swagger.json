@@ -6,7 +6,7 @@
         "description": "Documentação da API de eventos"
     },
     "servers": [{
-        "url": "http://localhost:3000",
+        "url": "http://localhost:3001",
         "description": "API local"
     },{
         "url": "https://api-eventos-allexfelicio.vercel.app",
