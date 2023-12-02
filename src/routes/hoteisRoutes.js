@@ -9,12 +9,12 @@ router.post('/', hoteis.createHotel);
 router.get('/', hoteis.getAllHotels);
 
 // Rota para obter um hotel específico pelo ID
-router.get('/:id', hoteis.getHotelById);
+router.get('/:hotelId', hoteis.getHotelById);
 
 // Rota para atualizar um hotel pelo ID
-router.put('/:id', hoteis.updateHotel);
+router.put('/:hotelId', hoteis.updateHotel);
 
 // Rota para deletar um hotel pelo ID
-router.delete('/:id', hoteis.deleteHotel);
+router.delete('/:hotelId', hoteis.deleteHotel);
 
 module.exports = router;

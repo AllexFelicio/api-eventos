@@ -9,10 +9,10 @@ router.post('/', ticketController.createBooking);
 router.get('/', ticketController.getAllBookings);
 
 // Rota para obter uma passagem específica pelo ID
-router.get('/:id', ticketController.getBookingById);
+router.get('/:bookingId', ticketController.getBookingById);
 
 // Rota para atualizar uma passagem pelo ID
-router.put('/:id', ticketController.updateBooking);
+router.put('/:bookingId', ticketController.updateBooking);
 
 // Rota para cancelar uma passagem pelo ID
 router.delete('/:id', ticketController.deleteBooking);
