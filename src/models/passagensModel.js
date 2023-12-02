@@ -7,19 +7,19 @@ const flightBookingSchema = new mongoose.Schema({
     },
     outboundFlight: {
         type: String,
-        required: true
+        required: false
     },
     returnFlight: {
         type: String,
-        required: true
+        required: false
     },
     seatOnOutbound: {
         type: String,
-        required: true
+        required: false
     },
     seatOnReturn: {
         type: String,
-        required: true
+        required: false
     },
     valor: {
         type: Number,
